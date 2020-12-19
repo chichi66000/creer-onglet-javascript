@@ -1,0 +1,54 @@
+* , ::before ; ::after{
+    margin:0;
+    padding:0;
+}
+body{
+    margin: auto;
+    width: 600px;
+    background: #f1f1f1;
+    font-size: 17px;
+}
+#barre{
+    display: flex;
+    align-self: space-evenly;
+    justify-content: center;
+    align-content: center;
+    background: cyan;
+    cursor: pointer;
+
+}
+.onglet{
+        padding: 10px;
+    font-size: 1.3em;
+    font-weight: 700;
+    
+}
+.onglet:not(:nth-child(3)){
+    border-right: solid black 1px;
+}
+
+
+.contenu{
+    width: 100%;
+    position: absolute;
+    height: 70%;
+    opacity: 0;
+}
+#general{
+    background: white;
+    border-radius: 10px;
+    margin: 10%;
+    position: relative;
+}
+.onglet.active{
+    background: midnightblue;
+    color: white;
+    transition: 0.3s ease;
+}
+.contenu.activeContenu{
+    animation: fade 0.5s forwards;
+}
+@keyframes fade{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
